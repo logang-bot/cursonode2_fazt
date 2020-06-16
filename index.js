@@ -15,7 +15,8 @@ app.set('view engine', 'ejs')
 //routes
 app.use(indexRoutes)
 
-
+//static files
+app.use(express.static(path.join(__dirname, 'src/public')))
 //listening
 app.listen(app.get('port'), () => {
     console.log('server on port', app.get('port'))
